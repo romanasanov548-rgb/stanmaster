@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СтанМастер — Производство вибропрессов и металлоформ для ЖБИ</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* Стили для картинок внутри блоков фич */
+.feature-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполнит блок без искажений */
+  display: block;
+  /* filter: brightness(0.6);  Раскомментируй, если захочешь затемнить картинку */
+}
+/* Стили для картинок внутри блоков фич */
+.feature-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполняет блок, обрезая лишнее по краям */
+  display: block;
+}
+.whatsapp-icon-img {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: block;
+}
+  :root {
+    --green: #3ab54a;
+    --green-dark: #2d9040;
+    --navy: #1a2a4a;
+    --navy-dark: #0f1c35;
+    --white: #ffffff;
+    --gray-light: #f5f5f5;
+    --gray-text: #444;
+    --text-dark: #1a2a4a;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+.about-logo-img {
+  width: 160px;  /* Ширина логотипа */
+  height: auto;  /* Высота подстраивается автоматически */
+  display: block;
+}
+
+/* Для мобильных */
+@media (max-width: 768px) {
+  .about-logo-img {
+    width: 120px;
+    margin: 0 auto 20px;
+  }
+} 
+  /* ===== HEADER ===== */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 20px;
+  }
+  .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-img {
+  height: 50px; /* Высота логотипа */
+  width: auto;  /* Ширина подстраивается автоматически */
+  display: block;
+}
+
+/* Для мобильных немного уменьшим */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+  }
+}
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .logo-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .logo-text span { color: var(--green); }
+
+  .search-bar {
+    flex: 1;
+    position: relative;
+    max-width: 500px;
+  }
+  .search-bar input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .search-bar input:focus { border-color: var(--green); }
+  .search-bar svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    width: 18px; height: 18px;
+  }
+
+  .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+  .header-contact svg {
+    width: 36px; height: 36px;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+  .header-phone {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+  }
+  .header-phone:hover { color: var(--green); }
+
+ 
+  /* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  background: #c8d8e8;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(26,42,74,0.6) 0%, rgba(26,42,74,0.2) 60%, transparent 100%);
+  z-index: 2;
+}
+
+.hero-tagline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navy-dark);
+  padding: 16px 20px;
+  text-align: center;
+  z-index: 3;
+}
+
+.hero-tagline h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+  /* ===== PRODUCTS GRID ===== */
+  .products-section {
+    background: #fff;
+    padding: 48px 20px 40px;
+  }
+  .products-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 20px;
+  }
+  .product-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .product-card:hover { transform: translateY(-4px); }
+  .product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+  .product-card .prod-img-placeholder {
+    width: 100%;
+    height: 140px;
+    background: #f0f4f8;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+  .product-card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .btn-catalog {
+    display: block;
+    width: fit-content;
+    margin: 36px auto 0;
+    background: var(--green);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-catalog:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+  /* ===== FORM SECTION ===== */
+  .form-section {
+    background: #fff;
+    padding: 40px 20px;
+    border-top: 3px solid #e8edf2;
+  }
+  .form-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .form-left h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .form-left p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+  }
+  .form-right .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-right input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-right input:focus { border-color: var(--green); }
+  .form-right input::placeholder { color: #888; }
+  .btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--green);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 4px;
+  }
+  .btn-submit:hover { background: var(--green-dark); }
+  .form-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-section {
+    background: #fff;
+    padding: 40px 20px;
+    border-top: 3px solid #e8edf2;
+  }
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-logo {
+    width: 160px;
+  }
+  .about-text p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text p strong { color: var(--navy); }
+
+  /* ===== VIDEO HERO ===== */
+  .video-hero {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    background: #1a2a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+  }
+  .video-play-btn {
+    position: absolute;
+    width: 80px; height: 80px;
+    background: rgba(58,181,74,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .video-play-btn:hover { background: var(--green); transform: scale(1.1); }
+  .video-play-btn svg { width: 36px; height: 36px; color: #fff; margin-left: 5px; }
+
+  /* ===== FEATURES (PRODUCTION / DELIVERY / WARRANTY) ===== */
+  .features-section {
+    background: #fff;
+  }
+  .feature-row {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+  }
+  .feature-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+  }
+  .feature-row .feat-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #2a3f6a;
+  }
+  .feature-row .feat-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .feat-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    min-width: 240px;
+    letter-spacing: 1px;
+  }
+  .feat-divider {
+    width: 3px;
+    height: 60px;
+    background: var(--green);
+    margin: 0 30px;
+    flex-shrink: 0;
+  }
+  .feat-desc {
+    font-size: 15px;
+    color: #dde8f5;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  .feature-info-row {
+    background: var(--navy);
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+  }
+  .feature-info-row .feat-label { font-size: 22px; min-width: 200px; }
+  .feature-info-row .feat-divider { height: 40px; }
+
+  /* ===== VIDEO REVIEWS ===== */
+  .reviews-section {
+    padding: 60px 20px;
+    background: #fff;
+  }
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+  .reviews-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .review-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 220px;
+    cursor: pointer;
+    background: #2a3f6a;
+  }
+  .review-card .rc-placeholder {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .review-card:hover .rc-placeholder { opacity: 0.55; }
+  .review-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .review-play-btn {
+    width: 60px; height: 60px;
+    background: rgba(58,181,74,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .review-card:hover .review-play-btn { transform: scale(1.1); }
+  .review-play-btn svg { width: 28px; height: 28px; color: #fff; margin-left: 4px; }
+
+  /* ===== HOW TO ORDER ===== */
+  .order-section {
+    padding: 60px 20px;
+    background: #f8fafc;
+  }
+  .order-steps {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .order-step {
+    flex: 1;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .step-text {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+    padding-top: 8px;
+  }
+  .step-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-top: 20px;
+  }
+  .step-arrow svg {
+    width: 50px; height: 50px;
+    color: var(--navy-dark);
+    opacity: 0.8;
+  }
+
+  /* ===== CONTACTS ===== */
+  .contacts-section {
+    padding: 50px 20px;
+    background: #fff;
+    border-top: 3px solid #e8edf2;
+  }
+  .contacts-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contacts-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .contacts-info p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  .map-embed {
+    width: 100%;
+    height: 250px;
+    background: #d4e2f0;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ===== PRE-FOOTER BANNER ===== */
+  .prefooter-banner {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    background: #111;
+  }
+  .prefooter-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+  }
+  .prefooter-logo {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prefooter-logo .logo-text-big {
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  .prefooter-logo .logo-text-big span { color: var(--green); }
+
+  /* ===== FOOTER NAV ===== */
+  .footer-nav {
+    background: #0f1c35;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .footer-logo-icon {
+    width: 42px; height: 42px;
+    margin-right: 30px;
+  }
+  .footer-nav-links {
+    display: flex;
+    gap: 32px;
+    flex: 1;
+  }
+  .footer-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--green);
+  }
+  .footer-nav-link svg { width: 28px; height: 28px; }
+  .footer-nav-link span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .footer-nav-link:hover { color: #6fd97c; }
+
+  .footer-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 30px;
+  }
+  .footer-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px; height: 38px;
+    background: var(--green);
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+  .footer-social a:hover { background: var(--green-dark); }
+
+  .footer-legal {
+    margin-left: 30px;
+    font-size: 11px;
+    color: #8a9cbb;
+    line-height: 1.6;
+  }
+
+  /* SVG logo shapes */
+  .logo-svg-mark { display: inline-block; }
+
+  @media (max-width: 768px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-inner { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .order-steps { flex-direction: column; }
+    .contacts-inner { grid-template-columns: 1fr; }
+    .feat-content { padding: 0 20px; }
+    .feat-label { min-width: 140px; font-size: 18px; }
+    .footer-nav { flex-wrap: wrap; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-inner">
+    <!-- ЛОГОТИП-КАРТИНКА -->
+    <a href="#" class="logo">
+      <img src="png 4.png" alt="СтанМастер" class="logo-img">
+    </a>
+
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="">
+    </div>
+
+    <div class="header-contact">
+  <img src="Логотип_MAX.svg" alt="WhatsApp" class="whatsapp-icon-img">
+  <a href="tel:+78453686970" class="header-phone">+7 (8453) 68-69-70</a>
+</div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img src="баннер на главную.jpg" alt="СтанМастер" class="hero-img">
+  <div class="hero-overlay"></div>
+  <div class="hero-tagline">
+    <h1>Производство вибропрессов и металлоформ для ЖБИ</h1>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS GRID ===== -->
+<section class="products-section">
+  <div class="products-grid">
+
+    <!-- Product 1 - Vibro press -->
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="5" y="30" width="60" height="30" rx="3" fill="#4a6a9a" stroke="#2a4a7a" stroke-width="1.5"/>
+          <rect x="50" y="10" width="18" height="30" rx="2" fill="#f5a623" stroke="#d4891a" stroke-width="1"/>
+          <rect x="0" y="50" width="70" height="8" rx="2" fill="#b0c4de"/>
+          <ellipse cx="58" cy="62" rx="6" ry="6" fill="#555"/>
+          <ellipse cx="12" cy="62" rx="6" ry="6" fill="#555"/>
+          <ellipse cx="58" cy="62" rx="3" ry="3" fill="#888"/>
+          <ellipse cx="12" cy="62" rx="3" ry="3" fill="#888"/>
+          <!-- conveyor belt sand -->
+          <rect x="55" y="55" width="20" height="12" rx="2" fill="#c8a96e" transform="rotate(-30 55 55)" opacity="0.7"/>
+        </svg>
+      </div>
+      <p>Вибропресс серии ВП-1000. Высокая производительность, надёжная конструкция, соответствует нормам ГОСТа.</p>
+    </div>
+
+    <!-- Product 2 - Metal form (large) -->
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="5" y="15" width="70" height="50" rx="3" fill="#555" stroke="#333" stroke-width="2"/>
+          <rect x="10" y="20" width="60" height="40" rx="2" fill="#222"/>
+          <rect x="3" y="12" width="6" height="12" rx="1" fill="#666"/>
+          <rect x="71" y="12" width="6" height="12" rx="1" fill="#666"/>
+          <rect x="3" y="46" width="6" height="12" rx="1" fill="#666"/>
+          <rect x="71" y="46" width="6" height="12" rx="1" fill="#666"/>
+        </svg>
+      </div>
+      <p>Металлоформа для ФБС блоков. Точные размеры, долговечная сталь, гарантия 5 лет на конструкцию.</p>
+    </div>
+
+    <!-- Product 3 - Metal form rectangular -->
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="8" y="20" width="64" height="42" rx="3" fill="#4a4a4a" stroke="#2a2a2a" stroke-width="2"/>
+          <rect x="13" y="25" width="54" height="32" rx="2" fill="#1a1a1a"/>
+          <rect x="6" y="17" width="5" height="10" rx="1" fill="#555"/>
+          <rect x="69" y="17" width="5" height="10" rx="1" fill="#555"/>
+          <rect x="6" y="50" width="5" height="10" rx="1" fill="#555"/>
+          <rect x="69" y="50" width="5" height="10" rx="1" fill="#555"/>
+          <!-- rim details -->
+          <line x1="8" y1="36" x2="72" y2="36" stroke="#333" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <p>Форма для бордюрного камня. Разборная конструкция для удобства демонтажа и чистки.</p>
+    </div>
+
+    <!-- Product 4 - Vibro press large -->
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="5" y="28" width="55" height="28" rx="3" fill="#4a6a9a" stroke="#2a4a7a" stroke-width="1.5"/>
+          <rect x="48" y="8" width="20" height="32" rx="2" fill="#f5a623"/>
+          <rect x="0" y="48" width="65" height="7" rx="2" fill="#b0c4de"/>
+          <ellipse cx="52" cy="60" rx="6" ry="6" fill="#555"/>
+          <ellipse cx="10" cy="60" rx="6" ry="6" fill="#555"/>
+          <ellipse cx="52" cy="60" rx="3" ry="3" fill="#888"/>
+          <ellipse cx="10" cy="60" rx="3" ry="3" fill="#888"/>
+          <rect x="53" y="52" width="22" height="10" rx="2" fill="#c8a96e" transform="rotate(-25 53 52)" opacity="0.6"/>
+        </svg>
+      </div>
+      <p>Вибропресс ВП-1500. Двойная вибрация, производительность до 1500 изделий в смену.</p>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="5" y="28" width="55" height="28" rx="3" fill="#3a5a8a"/>
+          <rect x="48" y="8" width="20" height="32" rx="2" fill="#e8901a"/>
+          <rect x="0" y="48" width="65" height="7" rx="2" fill="#a0b4ce"/>
+          <ellipse cx="52" cy="60" rx="6" ry="6" fill="#444"/>
+          <ellipse cx="10" cy="60" rx="6" ry="6" fill="#444"/>
+        </svg>
+      </div>
+      <p>Вибропресс серии ВП-800. Компактный, идеален для малых производств и стартапов.</p>
+    </div>
+
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="6" y="18" width="68" height="46" rx="3" fill="#505050" stroke="#303030" stroke-width="2"/>
+          <rect x="11" y="23" width="58" height="36" rx="2" fill="#1e1e1e"/>
+          <rect x="4" y="15" width="5" height="10" rx="1" fill="#606060"/>
+          <rect x="71" y="15" width="5" height="10" rx="1" fill="#606060"/>
+          <rect x="4" y="50" width="5" height="10" rx="1" fill="#606060"/>
+          <rect x="71" y="50" width="5" height="10" rx="1" fill="#606060"/>
+        </svg>
+      </div>
+      <p>Металлоформа для дорожных плит ПД. Усиленный каркас, толщина стали 6 мм.</p>
+    </div>
+
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="10" y="22" width="60" height="40" rx="3" fill="#484848" stroke="#282828" stroke-width="2"/>
+          <rect x="15" y="27" width="50" height="30" rx="2" fill="#202020"/>
+          <rect x="8" y="19" width="5" height="10" rx="1" fill="#585858"/>
+          <rect x="67" y="19" width="5" height="10" rx="1" fill="#585858"/>
+        </svg>
+      </div>
+      <p>Форма для колодезных колец КС. Разборная, диаметры от 700 до 2000 мм, под заказ.</p>
+    </div>
+
+    <div class="product-card">
+      <div class="prod-img-placeholder">
+        <svg viewBox="0 0 80 70" fill="none" width="80" height="70">
+          <rect x="5" y="25" width="58" height="30" rx="3" fill="#4a6a9a"/>
+          <rect x="50" y="6" width="20" height="34" rx="2" fill="#f5a623"/>
+          <rect x="0" y="47" width="68" height="7" rx="2" fill="#b0c4de"/>
+          <ellipse cx="54" cy="60" rx="6" ry="6" fill="#444"/>
+          <ellipse cx="10" cy="60" rx="6" ry="6" fill="#444"/>
+          <rect x="55" y="52" width="20" height="10" rx="2" fill="#c8a96e" transform="rotate(-28 55 52)" opacity="0.65"/>
+        </svg>
+      </div>
+      <p>Вибропресс ВП-2000 Профи. Производительность 2000+ изделий в смену, ЧПУ управление.</p>
+    </div>
+
+  </div>
+
+  <a href="#" class="btn-catalog">Перейти к каталогу</a>
+</section>
+
+<!-- ===== FORM SECTION ===== -->
+<section class="form-section">
+  <div class="form-inner">
+    <div class="form-left">
+      <h2>Подобрать станок</h2>
+      <p>Не нашли станок в каталоге? Отправьте нам запрос, и мы подберем лучший станок по выгодной цене</p>
+    </div>
+    <div class="form-right">
+      <div class="form-fields">
+        <input type="text" placeholder="Название станка">
+        <input type="tel" placeholder="Телефон для связи">
+        <input type="email" placeholder="Почта для связи">
+        <button class="btn-submit">Отправить</button>
+      </div>
+      <div class="form-note">Мы ответим в течение дня</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section">
+  <div class="about-inner">
+    <div>
+      <!-- Твой логотип -->
+      <img src="about-logo.png" alt="СтанМастер" class="about-logo-img">
+    </div>
+    <div class="about-text">
+      <p>Изготовление качественных металлических конструкций подразумевает наличие квалифицированного персонала. Наши специалисты имеют достаточный опыт для контроля производства и тестирования изделий на техническое соответствие. На предприятии задействовано высокоточное оборудование для лазерной и плазменной обработки стальных заготовок, поэтому вся продукция соблюдает нормы ГОСТа 25781-83.</p>
+      <p>Особое внимание уделяется индивидуальной работе с клиентами, мы предлагаем выгодные условия для сотрудничества, предоставляем скидки и всегда открыты для предоставления необходимой информации. За условиями проведения различных акций и наличием различных изделий, всегда можно проследить на нашем сайте.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO HERO ===== -->
+<section class="video-hero">
+  <div style="width:100%;height:100%;background:linear-gradient(135deg,#0f1c35 0%,#1a3a2a 50%,#0f2a20 100%);position:absolute;"></div>
+  <!-- Hard hat / industrial worker imagery represented by gradient -->
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 55% 50%, rgba(58,181,74,0.08) 0%, transparent 60%);"></div>
+  <div class="video-play-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-section">
+
+    <!-- PRODUCTION -->
+  <div class="feature-info-row">
+    <div class="feat-label">Производство</div>
+    <div class="feat-divider"></div>
+    <div class="feat-desc">Собственное производство на сертифицированном оборудовании с 2011 года. Большой ассортимент в наличии на складе. Разработка нашими инженерами оборудования по ТЗ заказчиков</div>
+  </div>
+  
+  <div class="feature-row">
+    <!-- ВСТАВЛЯЕМ КАРТИНКУ -->
+    <img src="production-bg.jpg" alt="Производство СтанМастер" class="feature-bg-img">
+    
+    <!-- Убираем старый SVG, так как на фото уже есть логотип -->
+  </div>
+
+  <!-- DELIVERY -->
+  <div class="feature-info-row">
+    <div class="feat-label">Доставка</div>
+    <div class="feat-divider"></div>
+    <div class="feat-desc">Осуществляем доставку по России и странам СНГ от 3 дней. Гибкие цены и выгодные условия: подберем наиболее выгодную для Вас и Вашего бизнеса</div>
+  </div>
+  
+  <div class="feature-row">
+    <!-- КАРТИНКА ВМЕСТО ГРАДИЕНТА -->
+    <img src="delivery-bg.jpg" alt="Доставка СтанМастер" class="feature-bg-img">
+    
+    <div class="feat-content" style="justify-content:center;align-items:center;gap:20px;">
+      <!-- Текст "СтанМастер" убрал, так как на новой картинке уже есть лого -->
+    </div>
+  </div>
+
+  <!-- WARRANTY -->
+  <div class="feature-info-row">
+    <div class="feat-label">Гарантия</div>
+    <div class="feat-divider"></div>
+    <div class="feat-desc">Обеспечим гарантию до 5 лет на всю продукцию. Предоставим все необходимые документы и сертификаты и бесплатную консультацию специалистов по требованию.</div>
+  </div>
+
+</section>
+
+<!-- ===== VIDEO REVIEWS ===== -->
+<section class="reviews-section">
+  <h2 class="section-title">Видео-отзывы наших клиентов</h2>
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2a3a,#2a4a3a);"></div>
+      <div class="review-play">
+        <div class="review-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#2a3a1a,#3a5a2a);"></div>
+      <div class="review-play">
+        <div class="review-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2a4a,#2a3a5a);"></div>
+      <div class="review-play">
+        <div class="review-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== HOW TO ORDER ===== -->
+<section class="order-section">
+  <h2 class="section-title">Как оформить заказ</h2>
+  <div class="order-steps">
+
+    <div class="order-step">
+      <div class="step-number">1</div>
+      <div class="step-text">Выберите нужный станок в каталоге или отправьте запрос через форму на сайте. Наш менеджер свяжется с вами в течение дня.</div>
+    </div>
+
+    <div class="step-arrow">
+      <svg viewBox="0 0 60 60" fill="none">
+        <polygon points="5,15 5,45 55,30" fill="#1a2a4a"/>
+      </svg>
+    </div>
+
+    <div class="order-step">
+      <div class="step-number">2</div>
+      <div class="step-text">Согласуйте технические характеристики и условия оплаты. Подпишем договор и приступим к производству или отгрузке со склада.</div>
+    </div>
+
+    <div class="step-arrow">
+      <svg viewBox="0 0 60 60" fill="none">
+        <polygon points="5,15 5,45 55,30" fill="#1a2a4a"/>
+      </svg>
+    </div>
+
+    <div class="order-step">
+      <div class="step-number">3</div>
+      <div class="step-text">Получите оборудование с полным пакетом документов, сертификатами и гарантийным талоном. Обеспечим шефмонтаж и запуск.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CONTACTS ===== -->
+<section class="contacts-section">
+  <div class="contacts-inner">
+    <div class="contacts-info">
+      <h3>ОФИС КОМПАНИИ:</h3>
+      <p>Россия г. Балаково,<br>ул. Промышленная 26/2</p>
+      <h3>Тел.:</h3>
+      <p>+7 (8453) 686 970</p>
+      <h3>РЕЖИМ РАБОТЫ</h3>
+      <p>Пн-Пт с 9.00 до 18.00</p>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22478.32!2d47.795!3d52.030!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41552ba9a8a42b73%3A0x2b9b7b8c5a3a8c7d!2z0JHQsNC70LDQutC-0LLQviwg0KHQsNGA0LDRgtC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1sru!2sru!4v1620000000000"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRE-FOOTER BANNER ===== -->
+<div class="prefooter-banner">
+  <div style="width:100%;height:100%;background:linear-gradient(135deg,#050e1a 0%,#0d1e2a 50%,#0a1a14 100%);"></div>
+  <div class="prefooter-logo">
+    <span class="logo-text-big">Стан<span>Мастер</span></span>
+  </div>
+</div>
+
+<!-- ===== FOOTER NAV ===== -->
+<footer class="footer-nav">
+  <svg class="footer-logo-icon" viewBox="0 0 60 60" fill="none">
+    <polygon points="8,52 30,10 52,52 42,52 30,28 18,52" fill="#fff" opacity="0.9"/>
+    <polygon points="8,52 30,10 20,52" fill="#3ab54a"/>
+  </svg>
+
+  <div class="footer-nav-links">
+    <a href="#" class="footer-nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Главная</span>
+    </a>
+    <a href="#" class="footer-nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span>Каталог</span>
+    </a>
+    <a href="#" class="footer-nav-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Связаться</span>
+    </a>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-social">
+    <a href="#">ВК</a>
+    <a href="#">R</a>
+    <a href="#">✆</a>
+  </div>
+
+  <div class="footer-legal">
+    ООО «СтанМастер»<br>
+    ИНН 1234567890<br>
+    ОГРН 1234567890<br>
+    Юр. адрес: г. Москва, ул. Широкая, 7/4
+  </div>
+</footer>
+
+</body>
+</html>
